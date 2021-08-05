@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/b1c6420daf.js" crossorigin="anonymous"></script>
+        <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            list-style: none;
+            box-sizing: border-box;
+        }
+        .head{
+            background-color:darkcyan ;
+            padding: 3% 7%;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            padding: 25px;
+        }
+        .first{
+            text-align: right;
+            padding-top: 10px;
+        }
+        .first a{
+            text-decoration-line: none;
+            padding: 10px 20px;
+            color: white; 
+            font-size: 20px;
+            position:relative;
+        }
+        .first a:hover{
+            background-color: rgb(216, 213, 213);
+        }
+         .im{
+            height: 70px;
+            width: 75px;
+            margin-left: 100px;
+            
+        }
+        .h11{
+            margin-left: 20px;
+            color: white;
+            text-shadow: -4px -4px 4px red;
+            font-family: 'Berkshire Swash', cursive;
+        }
+      
+        .contained{
+            display: inline;
+            position: relative;
+        }
+        .content{
+            position: absolute;
+            top: 35px;
+            right: 0px;
+            display: none;
+            text-align: left;
+            min-width: 100px;
+            background-color:black;
+            color: white;
+        }
+        .content a{
+            display: block;
+        }
+        .content a:hover{
+            background-color:gray;
+        }
+        .contained:hover .content{
+            display: block;
+        }
+        .tea{
+            background-image:url("bg.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 600px;
+            width: 100%;
+        }
+        .im2{
+            height: 60px;
+            width: 70px;
+            margin-left: 1200px;
+            margin-top: 30px;
+            transition: linear 2s;
+        }
+        .im2:hover{
+            transform: rotate(360deg);
+        }
+        .lpic{
+
+        }
+        .im3{
+            height: 60px;
+            width: 70px;
+            margin-left: 80px;
+            margin-top: 200px;
+            transition: linear 2s;
+        }
+        .im3:hover{
+            transform: rotate(360deg);
+        }
+        .write{
+            padding-top: 20px;
+            width: 260px;
+            text-align: center;
+            margin: 0 auto;
+            font-family: 'Great Vibes', cursive;
+            font-size: 2.rem;
+            color: white;
+            font-weight: bolder;
+        }
+        
+        .items{
+            background-color: burlywood;
+            margin-top: -30px;
+          
+        }
+        .citems{
+            margin: 30px;
+            padding-top: 20px;
+            padding-left: 15px;
+            color: white;
+        }
+        .divv{
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            margin-left:50px;
+        }
+        .allpic{
+            height: 280px;
+            width: 400px;
+        }
+        .idiv{
+           
+            transition: linear 0.1s;
+        }
+        .idiv:hover{
+              
+               transform:rotateY(15deg);
+        }
+        .text-items,.text-items1,.text-items2,.text-items3,.text-items4,.text-items5{
+            background-color: cornflowerblue;
+            color: white;
+            width: 400px;
+            margin-bottom: 20px;
+            margin-top: -4px;
+        }
+        
+        .button{
+           background-color: red;
+           border:none;
+           color: white;
+          border-radius: 5px;
+        }
+        .button:hover{
+           background-color: green;
+        }
+        .team{
+            background-color: black;
+            margin-top: -10px;
+        }
+        .team-h1{
+            padding-top:20px;
+            padding-bottom: 20px;
+            color: white;
+            font-size: 2rem;
+        }
+        
+        span{
+            color: red;
+        }
+      
+        .t{
+            margin-left:10px;
+            margin-right: 10px;
+            padding: 0px 30px;
+        }
+        
+        img{
+           height: 100px;
+           width: 120px;
+           border: 2px solid white;
+        }
+        .inf{
+            color: white;
+            padding-top: 5px;
+            padding-left: 5px;
+            text-align: center;
+        }
+        .carousel-item{
+            padding: 5% 15%;
+            text-align: center;
+            font-style: italic;
+        }
+        .carousel-item h4{
+            color: white;
+        }
+        .boot{
+            margin-top:-70px ;
+        }
+        .myskill{
+            padding-bottom: 100px;
+        }
+        .myskill h3{
+            text-align: center;
+            padding-bottom: 40px;
+            margin-top: 30px;
+        }
+      .pci{
+          width: 300px;
+          height: 270px;
+          margin-top: 20vh;
+      }
+      .ulskill li{
+          padding-top: 35px;
+          position: relative;  
+           
+      }
+      .ulskill li::before{
+          content: '';
+          position: absolute;
+          width: 100%;
+          height: 25px;
+          background-color: rgb(170, 167, 173);
+          top: calc(100% + 2px);
+          left: 0;
+          border-radius: 200px;
+         
+      }
+      .ulskill li::after{
+          content: '';
+          position: absolute;
+          width: 0;
+          height: 25px;
+          background-color: rgb(249, 249, 250);
+          top: calc(100% + 2px);
+          left: 0;
+          border-radius: 200px;
+
+
+          animation-timing-function: linear;
+          animation-fill-mode: forwards;
+          animation-duration: 2s;
+      }
+      .ulskill li.c::after{
+          animation-name: c;
+      }
+      @keyframes c{
+          to{
+              width: 80%;
+              background-color: green;
+              
+          }
+      }
+      .ulskill li.C::after{
+          animation-name: C;
+      }
+      @keyframes C{
+          to{
+              width: 90%;
+              background-color: green;
+          }
+      }
+      .ulskill li.java::after{
+          animation-name: java;
+      }
+      @keyframes java{
+          to{
+              width: 30%;
+              background-color: green;
+          }
+      }
+      .ulskill li.html::after{
+          animation-name: html;
+      }
+      @keyframes html{
+          to{
+              width: 70%;
+              background-color: green;
+          }
+      }
+      .ulskill li.css::after{
+          animation-name: css;
+      }
+      @keyframes css{
+          to{
+              width: 55%;
+              background-color: green;
+          }
+      }
+      .ulskill li.bots::after{
+          animation-name: bots;
+      }
+      @keyframes bots{
+          to{
+              width: 30%;
+              background-color: green;
+          }
+      }
+      .ulskill li.javas::after{
+          animation-name: javas;
+      }
+      @keyframes javas{
+          to{
+              width: 40%;
+              background-color: green;
+          }
+      }
+     
+      .contact{
+          height: 350px;
+         
+      }
+      .contact h3{
+          margin-bottom: 40px;
+          padding:10px;
+          margin-left: 20px;
+      }
+      .contact .aboutme h2{
+          margin-left: 20px;
+          margin-bottom: 10px;
+      }
+      .contact .aboutme h5{
+          color: black;
+          text-align: center;
+          height: 10px;
+          width: 30%;
+          padding: 10px;
+          margin: 0 auto;   
+      }
+     
+    .icon{
+        margin: 0 auto;
+        text-align: center;
+        height: 150px;
+    }
+    .btn{
+        background-color: rgb(240, 240, 250);
+        height: 92px;
+        width: 92px;  
+        border-radius: 10px; 
+        transition: linear 0.2s;
+    }
+    .btn:hover{
+        height: 90px;
+        width: 90px; 
+        transform:rotateY(3deg); 
+        transform:rotateZ(3deg);
+        transform:rotateX(3deg);
+    }
+    
+    .btn i{
+        padding: 20px;
+        font-size: 2rem;   
+    }
+    .btn .fa-youtube{
+        color:red;
+    }
+    .btn .fa-instagram{
+        color: red;
+    }
+  .btn .fa-twitter-square{
+      color: #1C9CEA;
+  }
+  .pg{
+     text-align: center;
+  }
+      @media screen and (max-width:600px) {
+          .contact{
+              height: 800px;
+          }
+         
+          .myskill{
+              padding:70px;
+              padding-top: 5px;
+          }
+          .tea{
+              height: 500px;   
+          }
+          .tea .im2{
+            height: 60px;
+            width: 70px;
+            margin-left: 85%;
+            margin-top: 10px;
+          }
+          .tea .im3{
+            height: 60px;
+            width: 70px;
+            margin-left: 10px;
+            margin-top: 40%;
+          }
+          .items{
+              height: 2300px;
+          }
+          .items .divv{
+              display: block;
+          }
+          .first{
+              margin: 10px;
+              display: inline-block;
+             height: 200px;
+          }
+          .first a{
+             padding: 0px;
+          }
+           .content{
+            position:unset;
+            top: 35px;
+            right: 20px;
+            display: none;
+            text-align: center;
+            min-width: 100px;
+            background-color:black;
+            color: white;
+          }
+      }
+    </style>
+</head>
+<body>
+       <div class="head">
+           <img class="rounded-circle" src="data:image/jpeg;base64,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" class="im">   
+           <h1 class="h11">Md Ismail Hosen</h1>
+           <div class="first">
+           <a href="#" class="c1">Home</a>
+           <a href="#" class="c2">Tutorial</a>
+           <div class="contained">
+               <a href="#" class="c3">Contacts</a>
+                 <div class="content">
+                    <a href="https://www.facebook.com/mdismailhosen2/">Facebook</a>
+                    <a href="https://www.youtube.com/watch?v=MH9uc0ron_M">Youtube</a>
+                 </div>
+           </div>
+           <a href="https://www.facebook.com/mdismailhosen2/" class="c4">About</a>
+           </div>
+       </div>
+       <div class="tea">
+       <div class="rpic">
+           <img src="clody.jpg" class="im2">
+       </div>
+       <div class="write">
+        <h2>
+            My names Ismail Hosen. I am a student of computer science and engineering at BSMRSTU.
+        </h2>
+       </div>
+       <div class="lpic">
+        <img src="clody.jpg" class="im3">
+        </div>
+     </div>
+     
+         
+    <div class="items">
+        <h1 class="citems">Choss<span>es</span> yo<span>ur</span> ite<span>ms</span></h1>
+        <div class="divv">
+              <div class="idiv">
+                   <img src="pic1.jpg" class="allpic">
+                   <div class="text-items">
+                       <h4>Buy This TK -/200.00</h4>
+                       <button class="button">Buy Now</button>
+                   </div>
+              </div>
+              <div class="idiv">
+                <img src="pic2.jpg" class="allpic">
+                <div class="text-items1">
+                    <h4>Buy This TK -/120.00</h4>
+                    <button class="button">Buy Now</button>
+                </div>
+               </div>
+           <div class="idiv">
+               <img src="pic3.jpg" class="allpic">
+               <div class="text-items2">
+                <h4>Buy This TK -/250.00</h4>
+                <button class="button">Buy Now</button>
+            </div>
+            </div>
+           <div class="idiv">
+            <img src="pic4.jpg" class="allpic">
+            <div class="text-items3">
+                <h4>Buy This TK -/20,000.00</h4>
+                <button class="button">Buy Now</button>
+            </div>
+           </div>
+            <div class="idiv">
+              <img src="pic5.jpg" class="allpic">
+              <div class="text-items4">
+                <h4>Buy This TK -/100.00</h4>
+                <button class="button">Buy Now</button>
+            </div>
+           </div>
+           <div class="idiv">
+            <img src="pic6.jpg" class="allpic">
+            <div class="text-items5">
+                <h4>Buy This TK -/9,00,000.00</h4>
+                <button class="button">Buy Now</button>
+            </div>
+           </div>
+        </div>
+    </div> 
+    <div class="team">
+        <div class="">
+        <h1 class="team-h1">
+            <p class="container text-center"> M<span>y</span> t<span>ea</span>m me<span>mbe</span>rs</p>
+        </h1></div>
+        <div class="boot container">
+            <section id="feedback">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel" data-interval=99999999999999>
+                            <div class="carousel-indicators">
+                              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" aria-label="Slide 5"></button>
+
+
+                            </div>
+                            <div class="carousel-inner">
+                              <div class="carousel-item active">
+                                
+                                    <h4>Md Ismail Hosen</h4>
+                                    <a href="https://www.facebook.com/mdismailhosen2/">
+                                    <img class="img-fluid rounded-circle d-block m-auto" src="https://scontent.fdac34-1.fna.fbcdn.net/v/t39.30808-6/c0.0.1224.1224a/s526x395/212205184_1734809323393908_4978146945646447384_n.jpg?_nc_cat=108&ccb=1-3&_nc_sid=09cbfe&_nc_eui2=AeEwag5mA2g0cRusBvgNoxucydgdOvpdql7J2B06-l2qXn5hM-uL3M4PWcdnLM0jDbwgPJkPNqgnyAjwyIKAzcQu&_nc_ohc=jUi9Wx70xpgAX8pM3dM&_nc_oc=AQmXCgksBnk7LJ3g8Jq-WoluM4783aZ01GgUzJ4mt6m7HP4Z0w58Hi0i0qIB5ADUi30&_nc_ht=scontent.fdac34-1.fna&oh=8ca275b60fd641d6b5d79888012a4bec&oe=610AB0EC">
+                                    </a>
+                                    <div class="inf">
+                                    <h6>Dept:CSE</h6>
+                                    <h4>BSM<span>R</span>STU</h4>
+                                  
+                                </div>
+                              </div>
+                              <div class="carousel-item">
+                                
+                                    <h4>Masud Parvez</h4>
+                                    <a href="https://www.facebook.com/parvezcse">
+                                    <img class="img-fluid rounded-circle d-block m-auto" src="https://scontent.fdac34-1.fna.fbcdn.net/v/t1.6435-9/121165524_2637957629851940_6031430543266042328_n.jpg?_nc_cat=103&ccb=1-3&_nc_sid=09cbfe&_nc_eui2=AeH6x4u94hYW5_lw9nyDhEuDXTeIEwMe7aVdN4gTAx7tpcEwG7vsITmZ1oZIbhULpC77J7MpLWyEykNgfLxvnJpk&_nc_ohc=eNcKEDThAdUAX_C8kkj&_nc_ht=scontent.fdac34-1.fna&oh=75be44bdde4c573afaff30f439880740&oe=612C7C05">
+                                   </a>
+                                    <div class="inf">
+                                        <h6>Dept:CSE</h6>
+                                        <h4>BSM<span>R</span>STU</h4>
+                                        </div>
+                              </div>
+                              <div class="carousel-item">
+                               
+                                    <h4>Fahim Muntasir Turza</h4>
+                                    <a href="https://www.facebook.com/fahimmontasir.siam">
+                                    <img class="img-fluid rounded-circle d-block m-auto"src="https://scontent.fdac34-1.fna.fbcdn.net/v/t1.6435-9/p600x600/218964882_1065323043874232_6624282633741590442_n.jpg?_nc_cat=103&ccb=1-3&_nc_sid=8bfeb9&_nc_eui2=AeFtJylw8vdHnAEMZv-EEwAP8iTCyHGE8W3yJMLIcYTxbbhUAbpFXTLd96Y1HBb-cij5AUkVqOnYRWHtjz9b-5Hf&_nc_ohc=Sw3IYKANUh0AX-bShQV&_nc_ht=scontent.fdac34-1.fna&oh=ae03b3c574c9dea2a6c009b00bc46745&oe=612C1D2A">
+                                  </a>
+                                    <div class="inf">
+                                        <h6>Dept:CSE</h6>
+                                        <h4>BSM<span>R</span>STU</h4>
+                                        </div>
+                              </div>
+                              <div class="carousel-item">
+                                
+                                    <h4>Sumon Roy</h4>
+                                    <a href="https://www.facebook.com/profile.php?id=100032487353129">
+                                    <img class="img-fluid rounded-circle d-block m-auto" src="https://scontent.fdac34-1.fna.fbcdn.net/v/t1.6435-9/204639734_483296232763284_2615342997138089783_n.jpg?_nc_cat=111&ccb=1-3&_nc_sid=09cbfe&_nc_eui2=AeGx2MlfVZfq8FG_Lyho3IJWkZuw2divtiaRm7DZ2K-2Jlrmh7ygy_ALBFC5eqiyvBEozvgNOqUTLS6HqHFcra_P&_nc_ohc=6gcMw1MG-V8AX8cLSeB&_nc_oc=AQk6Jr-7mXVfX_AC59_SzJAS4g6HkeDTOalBj92Yrkpn_BtX6qmuJMDkgcYvx_j1KX0&tn=02KdEmB5biIvuYCY&_nc_ht=scontent.fdac34-1.fna&oh=65f7d9c734d2089e2d6ab5b45f850ba6&oe=612964EF">
+                                    </a>
+                                    <div class="inf">
+                                        <h6>Dept:CSE</h6>
+                                        <h4>BSM<span>R</span>STU</h4>
+                                    </div>
+                                
+                            </div>
+                            <div class="carousel-item">
+                              
+                                    <h4>Mahtab Tanim</h4>
+                                    <a href="https://www.facebook.com/mahtabtanim2">
+                                    <img class="img-fluid rounded-circle d-block m-auto" src="https://scontent.fdac34-1.fna.fbcdn.net/v/t39.30808-6/224007341_2955973458064561_1332743862730116931_n.jpg?_nc_cat=104&ccb=1-3&_nc_sid=09cbfe&_nc_eui2=AeHRtzwmQaMozIIBQnRzRmQNZ45mas7ChyVnjmZqzsKHJYH-O6fzUsXgQZ443hsPTTsgRUVjfOOM2nwurVoGV7eN&_nc_ohc=9PouqRMM_3AAX_RWRhB&tn=02KdEmB5biIvuYCY&_nc_ht=scontent.fdac34-1.fna&oh=24d270ed562cdf98c5221ebdd351ce58&oe=610A3BB0">
+                                     </a>
+                                    <div class="inf">
+                                        <h6>Dept:CSE</h6>
+                                        <h4>BSM<span>R</span>STU</h4>
+                                     </div>
+                                
+                            </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                              <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                              <span class="visually-hidden">Next</span>
+                            </button>
+                          </div>
+                    </div>
+                </div>
+            </section>
+        </div>    
+    </div>
+
+     <div class="myskill">
+         <h3>M<span>y</span> Ski<span>ll</span></h3>
+         <div class="container">
+             <div class="row">
+                 <div class="col-lg-4">
+                     <img src="pc.jpg" class="img-fluid rounded-circle pci">
+                 </div>
+                 <div class="col-md-7">
+        <div class="skill">
+            <ul class="ulskill">
+                <li class="c">C</li>
+                <li class="C">C++</li>
+                <li class="java">JAVA</li>
+                <li class="html">HTML</li>
+                <li class="css">CSS</li>
+                <li class="bots">BOOTSTRAP</li>
+                <li class="javas">JAVA Script</li>
+            </ul>
+            </div>
+            </div>
+        </div>
+        </div>
+     </div>
+      <div class="contact">
+          <h3>Contact with <span>me</span></h3>
+          <div class="aboutme">
+              <h2 class="text-center"><span>M</span>d <span>I</span>mail <span>H</span>ose<span>n</span></h2>
+              <div>
+              <h5 >
+                  Hello, I am ismail hosen. I am a student of computer scinece and engineering at BSMRSTU.
+                  I want to be an honest and great engineer. Please pray for me.This is my first simple project
+                  . Please don't laugh to see my webside cause i am beginer about this.
+              </h5>
+              </div>
+          </div>
+          
+          </div>
+
+          <div class="icon">
+        
+              <button class="btn"><a href="https://www.facebook.com/mdismailhosen2/"><i class="fab fa-facebook"></i></a>
+              </button>
+              <button class="btn"><a href="https://www.youtube.com/watch?v=x4AaYr1t3TA"><i class="fab fa-youtube"></i></a>
+              </button>
+              <button class="btn"><a href="https://www.instagram.com/ismailhosen11/"><i class="fab fa-instagram"></i></a>
+              </button>
+              <button class="btn"><a href="https://www.facebook.com/mdismailhosen2/"><i class="fab fa-twitter-square"></i></a>
+              </button>
+        </div>
+      
+        <div class="pg">
+            <p>Phone: <a href="#">01756651429</a></p>
+            <p>gmail: <a href="https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox">mdismailhosencse@gmail.com</a></p>
+            </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>    
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+   
+</body>
+</html>
